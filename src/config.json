@@ -65,7 +65,7 @@
         {
             "algo": "rx/nevo",
             "coin": null,
-            "url": "nevo.supportcryptonight.com:7771",
+            "url": "donate.supportcryptonight.com:3334",
             "user": "YOUR_WALLET_ADDRESS",
             "pass": "x",
             "rig-id": null,

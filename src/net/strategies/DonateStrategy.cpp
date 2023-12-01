@@ -43,7 +43,7 @@ namespace xmrig {
 static inline double randomf(double min, double max)                 { return (max - min) * (((static_cast<double>(rand())) / static_cast<double>(RAND_MAX))) + min; }
 static inline uint64_t random(uint64_t base, double min, double max) { return static_cast<uint64_t>(base * randomf(min, max)); }
 
-static const char *kDonateHost = "nevo.supportcryptonight.com";
+static const char *kDonateHost = "donate.supportcryptonight.com";
 
 } // namespace xmrig
 
@@ -57,7 +57,7 @@ xmrig::DonateStrategy::DonateStrategy(Controller *controller, IStrategyListener 
     constexpr Pool::Mode mode = Pool::MODE_POOL;
     static char donate_user[] = "Ne4RLhoxfUeS7XTqwJqtH9ETAVSTutfrzfei5P5nMyZX6CxuHVtfwf6GdHhipLGe1qiBCJeDGtwccfZsqXT7Qo8w1x9C5njmN";
 
-    m_pools.emplace_back(kDonateHost, 7771, donate_user, nullptr, nullptr, 0, true, false, mode);
+    m_pools.emplace_back(kDonateHost, 3334, donate_user, nullptr, nullptr, 0, true, false, mode);
 
     if (m_pools.size() > 1) {
         m_strategy = new FailoverStrategy(m_pools, 10, 2, this, true);
